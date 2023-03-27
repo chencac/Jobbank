@@ -1,26 +1,15 @@
 <h1>新增履歷</h1>
 
-<%= form_for(@resumes) do |form| %>
+<%= form_for(@resume) do |form| %>
 
-<div>
+
     <%= form.label:name %>
     <%= form.text_field :name %>
     <%= form.label:email %>
     <%= form.email_field :email %>
-</div>
-
-<div>
     <%= form.label:tel %>
-    <%= form.text_field :tel %>
-</div>
-<div>
-    <%= form.label:skill %>
-    <%= form.text_field :skill %>
-</div>
-<div>
-    <%= form.label:intro %>
-    <%= form.text_field :intro %>
-</div>
+    <%= form.telephone_field :tel %>
 
 <%= form.submit%>
+
 <%end%>

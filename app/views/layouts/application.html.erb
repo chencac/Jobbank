@@ -11,9 +11,10 @@
   </head>
 
   <body>
+    <%= render 'shared/flash' if flash.any? %>
     <%= render 'shared/navbar' %>
 
- <main>
+  <main>
     <%= yield %>
   </main>
   </body>

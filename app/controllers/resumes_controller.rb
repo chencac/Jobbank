@@ -2,16 +2,16 @@ class ResumesController < ApplicationController
     def index
     end
     def new
-        @resumes = Resume.new
+        @resume = Resume.new
     end
 
     def create
-      resume = Resume.new(resume_params)
-
-      if resume.save
-        redirect_to 'root_path'
+      @resume = Resume.new(resume_params)
+      
+      if @resume.save
+        redirect_to root_path, notice: '新增履歷成功'
       else
-        render html: params
+        render :new
       end
     end
 
