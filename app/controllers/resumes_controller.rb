@@ -1,5 +1,6 @@
 class ResumesController < ApplicationController
     def index
+      @resumes = Resume.order(created_at: :desc)
     end
     def new
         @resume = Resume.new
@@ -9,7 +10,7 @@ class ResumesController < ApplicationController
       @resume = Resume.new(resume_params)
       
       if @resume.save
-        redirect_to root_path, notice: '新增履歷成功'
+        redirect_to resumes_path, notice: '新增履歷成功'
       else
         render :new
       end
