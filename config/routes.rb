@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get  '/resumes' , to: 'resumes#index'
   get  '/resumes/new' , to: 'resumes#new'
   post '/resumes' , to: 'resumes#create'
+  get  '/resumes/:id' , to: 'resumes#show', as: 'resume'
 end

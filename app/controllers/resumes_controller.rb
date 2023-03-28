@@ -15,6 +15,9 @@ class ResumesController < ApplicationController
         render :new
       end
     end
+    def show
+      @resume =Resume.find(params[:id])
+    end
 
     private
   def resume_params
