@@ -15,24 +15,25 @@
  */
 
  main {
-    max-width: 900px;
+    max-width: 980px;
     margin: auto;
-  }
-
+ }
+  
   .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
+  
   .navbar ul {
     display: flex;
     align-items: center;
     list-style: none;
   }
-
+  
   .navbar ul li {
     margin: 0 10px;
   }
+  
 
   
